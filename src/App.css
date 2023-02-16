@@ -27,7 +27,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
-    align-items: center;
+    align-items: start;
 }
 
 .main--container > img{
@@ -37,14 +37,19 @@ header{
 .main--text--container{
     padding: 30px 20px;
     text-align: center;
-    font-size: 1rem;
-    line-height: 1.5rem;
     color: var(--BLACK);
 }
 
+.main--text--container > h1{
+   font-size: 2.15rem;
+   font-weight: bolder;
+}
+
 .main--text--container > p{
-    padding-block: 30px;
+    padding-block: 20px;
     color: var(--MEDIUMGRAY);
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 button{
@@ -59,6 +64,7 @@ button{
 }
 
 .main--client--container{
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
