@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
+    <nav>
       <img src="./src/assets/images/icon-close-menu.svg" alt="X icon" />
       <ul>
         <li>Features</li>
@@ -23,7 +23,7 @@ const Navbar = () => {
       </ul>
       <button>Login</button>
       <button>Register</button>
-    </div>
+    </nav>
   )
 }
 

@@ -17,8 +17,59 @@
 body{
     font-family: var(--FF);
     font-size: var(--FS);
+}
+
+.app--container{
+    min-width: 335px;
+}
+
+header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 30px 20px;
     align-items: center;
-    min-height: 100vh;
+}
+
+.main--container > img{
+    width: 100%;
+}
+
+.main--text--container{
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--BLACK);
+}
+
+.main--text--container > p{
+    padding-block: 30px;
+    color: var(--MEDIUMGRAY);
+}
+
+button{
+    padding: 15px 20px;
+    background-color: var(--BLACK);
+    color: var(--WHITE);
+    font-weight: 700;
+    font-family: inherit;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+.main--client--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 20px;
+}
+
+.client--icons{
+    width: 70px;
+}
+
+.audiophile--icon{
+    width: 50px;
 }
