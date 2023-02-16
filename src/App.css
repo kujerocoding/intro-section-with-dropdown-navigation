@@ -21,9 +21,17 @@ body{
     justify-content: center;
 }
 
+#root{
+    width: 1300px;
+}
+
 .app--container{
-    min-width: 335px;
+    width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 header{
@@ -31,6 +39,7 @@ header{
     justify-content: space-between;
     padding: 30px 20px;
     align-items: start;
+    width: 100%;
 }
 
 .icon--menu, .icon--menu--close{
@@ -158,14 +167,27 @@ nav > button {
     border-radius: 12px;
     border: 1px solid transparent;
     background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .btn--register{
     border: 1px solid var(--BLACK);
 }
 
-.main--container > img{
+.main--container{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main--img--container{
+    background-image: url(./assets/images/image-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
+    min-height: 300px;
 }
 
 .main--text--container{
@@ -175,18 +197,21 @@ nav > button {
 }
 
 .main--text--container > h1{
-   font-size: 2.15rem;
+    font-size: clamp(2.15rem, 5vw, 5rem);
    font-weight: bolder;
+}
+
+.text--remotework{
+   white-space: nowrap;
 }
 
 .main--text--container > p{
     padding-block: 20px;
     color: var(--MEDIUMGRAY);
     font-size: 1rem;
-    line-height: 1.5rem;
 }
 
-.main--container > button{
+.main--text--container > button{
     padding: 15px 20px;
     background-color: var(--BLACK);
     color: var(--WHITE);
@@ -195,6 +220,7 @@ nav > button {
     border: 1px solid transparent;
     border-radius: 10px;
     font-size: .9rem;
+    width: 150px;
 }
 
 .main--client--container{
@@ -212,4 +238,41 @@ nav > button {
 
 .audiophile--icon{
     width: 50px;
+}
+
+@media(min-width: 40em){
+
+    .main--container{
+        margin-top: 40px;
+        display: flex;
+        height: 600px;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 30px;
+        margin-inline: 20px;
+    }
+    .main--img--container{
+        background-image: url('/src/assets/images/image-hero-desktop.png');
+        order: 1;
+        height: 100%;
+        width: 50%;
+    }
+
+    .main--text--container{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+        width: 50%;
+        padding-right: 100px;
+    }
+
+    .main--text--container > p{
+        line-height: 2rem;
+    }
+
+    .main--client--container{
+        margin-top: 50px;
+    }
 }
