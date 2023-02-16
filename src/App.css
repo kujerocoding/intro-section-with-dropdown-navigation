@@ -58,6 +58,7 @@ nav{
 .nav--lists {
     list-style: none;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .nav--lists > li {
@@ -65,15 +66,20 @@ nav{
     color: var(--MEDIUMGRAY);
 }
 
-.nav--features{
+.nav--features,.nav--company{
     cursor: pointer;
 }
 
-.features--lists{
+.features--lists, .company--lists{
     list-style: none;
     color: var(--MEDIUMGRAY);
-    margin: 20px 40px;
+    margin: 20px 50px;
     line-height: 2rem;
+    font-size: 1rem;
+}
+
+.company--lists{
+    margin-left: 10px;
 }
 
 .features--lists--todo::before{
@@ -127,21 +133,20 @@ nav{
     background-position: center;
 }
 
-.icon--arrow--up{
+.icon--arrow--up, .icon--arrow--down{
+    margin-left: 10px;
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: url('./assets/images/icon-arrow-up.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.icon--arrow--up{
+    background-image: url('./assets/images/icon-arrow-up.svg');
+}
 .icon--arrow--down{
-    position: absolute;
-    width: 15px;
-    height: 15px;
     background-image: url('./assets/images/icon-arrow-down.svg');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 nav > button {
