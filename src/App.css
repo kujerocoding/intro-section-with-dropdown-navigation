@@ -41,7 +41,7 @@ nav{
     position: absolute;
     top: 0;
     right: 0;
-    padding: 20px;
+    padding: 30px 20px;
     background-color: var(--WHITE);
     display: flex;
     flex-direction: column;
