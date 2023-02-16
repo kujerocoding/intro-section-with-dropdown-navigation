@@ -3,26 +3,26 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav>
-      <img src="./src/assets/images/icon-close-menu.svg" alt="X icon" />
-      <ul>
+      <img className="icon--menu--close" src="./src/assets/images/icon-close-menu.svg" alt="X icon" />
+      <ul className='nav--lists'>
         <li>Features</li>
-            <ul>
+            {/* <ul>
                 <li>Todo List</li>
                 <li>Calendar</li>
                 <li>Reminders</li>
                 <li>Planning</li>
-            </ul>
+            </ul> */}
         <li>Company</li>
-            <ul>
+            {/* <ul>
                 <li>History</li>
                 <li>Our Team</li>
                 <li>Blog</li>
-            </ul>
+            </ul> */}
         <li>Careers</li>
         <li>About</li>
       </ul>
-      <button>Login</button>
-      <button>Register</button>
+      <button className='btn--login'>Login</button>
+      <button className='btn--register'>Register</button>
     </nav>
   )
 }

@@ -17,10 +17,13 @@
 body{
     font-family: var(--FF);
     font-size: var(--FS);
+    display: flex;
+    justify-content: center;
 }
 
 .app--container{
     min-width: 335px;
+    position: relative;
 }
 
 header{
@@ -28,6 +31,53 @@ header{
     justify-content: space-between;
     padding: 30px 20px;
     align-items: start;
+}
+
+.icon--menu, .icon--menu--close{
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: var(--WHITE);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    min-width: 60%;
+    min-height: 100vh;
+}
+
+.icon--menu--close{
+    align-self: flex-end;
+}
+
+.nav--lists {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.nav--lists > li {
+    margin-top: 20px;
+    color: var(--MEDIUMGRAY);
+}
+
+nav > button {
+    font-family: inherit;
+    color: var(--MEDIUMGRAY);
+    width: 100%;
+    text-align: center;
+    padding-block: 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.btn--register{
+    border: 1px solid var(--BLACK);
 }
 
 .main--container > img{
@@ -52,7 +102,7 @@ header{
     line-height: 1.5rem;
 }
 
-button{
+.main--container > button{
     padding: 15px 20px;
     background-color: var(--BLACK);
     color: var(--WHITE);

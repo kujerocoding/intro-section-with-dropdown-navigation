@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       
         <img src="../src/assets/images/logo.svg" alt="Snap logo" />
-        <img src="../src/assets/images/icon-menu.svg" alt="Hamburger menu" />
+        <img className="icon--menu" src="../src/assets/images/icon-menu.svg" alt="Hamburger menu" />
       
     </header>
   )
