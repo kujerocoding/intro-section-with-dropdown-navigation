@@ -13,10 +13,10 @@ const Navbar = (props) => {
       <ul className='nav--lists'>
         <li className='nav--features' onClick={toggleList}>Features<span className={isListOpen ? 'icon--arrow--up' : 'icon--arrow--down'}></span></li>
            {isListOpen && <ul className='features--lists'>
-                <li>Todo List</li>
-                <li>Calendar</li>
-                <li>Reminders</li>
-                <li>Planning</li>
+                <li className='features--lists--todo'>Todo List</li>
+                <li className='features--lists--calendar'>Calendar</li>
+                <li className='features--lists--reminders'>Reminders</li>
+                <li className='features--lists--planning'>Planning</li>
             </ul>}
         <li>Company</li>
             {/* <ul>

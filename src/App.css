@@ -69,6 +69,64 @@ nav{
     cursor: pointer;
 }
 
+.features--lists{
+    list-style: none;
+    color: var(--MEDIUMGRAY);
+    margin: 20px 40px;
+    line-height: 2rem;
+}
+
+.features--lists--todo::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    left: 30px;
+    position: absolute;
+    background-image: url('./assets/images/icon-todo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.features--lists--calendar::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    left: 30px;
+    position: absolute;
+    background-image: url('./assets/images/icon-calendar.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.features--lists--reminders::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    left: 30px;
+    position: absolute;
+    background-image: url('./assets/images/icon-reminders.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.features--lists--planning::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    left: 30px;
+    position: absolute;
+    background-image: url('./assets/images/icon-planning.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.features--lists--todo::before{
+    content: "";
+    width: 20px;
+    height: 30px;
+    left: 30px;
+    position: absolute;
+    background-image: url('./assets/images/icon-todo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .icon--arrow--up{
     position: absolute;
     width: 15px;
