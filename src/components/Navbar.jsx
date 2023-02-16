@@ -1,29 +1,37 @@
 import React, { useState } from 'react'
 
 const Navbar = (props) => {
-    const [isListOpen, setIsListOpen] = useState(false)
+    const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false)
 
-    function toggleList(){
-        setIsListOpen(prevState => !prevState)
+    
+
+    function toggleList(e){
+        const id = e.target.id
+        if (id === "company"){
+            setIsCompanyOpen(prevState => !prevState)
+        }else if(id === "features"){
+            setIsFeaturesOpen(prevState => !prevState)
+        }
     }
 
   return (
     <nav>
       <img className="icon--menu--close" src="./src/assets/images/icon-close-menu.svg" alt="X icon" onClick={props.handleClick}/>
       <ul className='nav--lists'>
-        <li className='nav--features' onClick={toggleList}>Features<span className={isListOpen ? 'icon--arrow--up' : 'icon--arrow--down'}></span></li>
-           {isListOpen && <ul className='features--lists'>
+        <li id="features" className='nav--features' onClick={toggleList}>Features<span className={isFeaturesOpen ? 'icon--arrow--up' : 'icon--arrow--down'}></span></li>
+           {isFeaturesOpen && <ul className='features--lists'>
                 <li className='features--lists--todo'>Todo List</li>
                 <li className='features--lists--calendar'>Calendar</li>
                 <li className='features--lists--reminders'>Reminders</li>
                 <li className='features--lists--planning'>Planning</li>
             </ul>}
-        <li>Company</li>
-            {/* <ul>
+        <li className='nav--company' onClick={toggleList} id="company">Company<span className={isCompanyOpen ? 'icon--arrow--up' : 'icon--arrow--down'}></span></li>
+             {isCompanyOpen && <ul>
                 <li>History</li>
                 <li>Our Team</li>
                 <li>Blog</li>
-            </ul> */}
+            </ul> }
         <li>Careers</li>
         <li>About</li>
       </ul>
