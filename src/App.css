@@ -65,6 +65,27 @@ nav{
     color: var(--MEDIUMGRAY);
 }
 
+.nav--features{
+    cursor: pointer;
+}
+
+.icon--arrow--up{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url('./assets/images/icon-arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon--arrow--down{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url('./assets/images/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 nav > button {
     font-family: inherit;
     color: var(--MEDIUMGRAY);

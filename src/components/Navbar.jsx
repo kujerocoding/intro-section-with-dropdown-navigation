@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = (props) => {
+
   return (
     <nav>
       <img className="icon--menu--close" src="./src/assets/images/icon-close-menu.svg" alt="X icon" onClick={props.handleClick}/>
       <ul className='nav--lists'>
-        <li>Features</li>
+        <li className='nav--features'>Features<span className='icon--arrow--up'></span></li>
             {/* <ul>
                 <li>Todo List</li>
                 <li>Calendar</li>
