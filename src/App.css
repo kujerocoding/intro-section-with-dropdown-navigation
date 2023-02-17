@@ -46,7 +46,12 @@ header{
     cursor: pointer;
 }
 
-nav{
+.nav--mobile--hide{
+
+    display: none;
+}
+
+.nav--mobile--active{
     position: absolute;
     top: 0;
     right: 0;
@@ -68,6 +73,7 @@ nav{
     list-style: none;
     margin-bottom: 30px;
     width: 100%;
+    font-size: 1rem;
 }
 
 .nav--lists > li {
@@ -168,7 +174,7 @@ nav > button {
     border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
-    font-weight: bold;
+    font-size: .9rem;
 }
 
 .btn--register{
@@ -275,4 +281,43 @@ nav > button {
     .main--client--container{
         margin-top: 50px;
     }
+
+    .icon--menu{
+        display: none;
+    }
+
+    .icon--menu--close{
+        display: none;
+    }
+
+    nav > button {
+        width: 20%;
+    }
+
+    .nav--mobile--hide{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav--lists{
+        display: flex;
+        gap: 40px;
+        padding-left: 40px;
+        margin: 0;
+        padding-right: 20px;
+    }
+
+    .nav--lists > li {
+        margin: 0;
+    }
+
+    header{
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    
+  
 }

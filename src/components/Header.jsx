@@ -10,11 +10,13 @@ const Header = () => {
         setIsMenuOpen(prevState => !prevState)
     }
 
+    
+
   return (
     <header>
         <img src="../src/assets/images/logo.svg" alt="Snap logo" />
+        <Navbar handleClick={handleMenuClick} isMenuOpen={isMenuOpen}/>
         <img className="icon--menu" src="../src/assets/images/icon-menu.svg" alt="Hamburger menu" onClick={handleMenuClick} />
-        {isMenuOpen && <Navbar handleClick={handleMenuClick}/>}
     </header>
   )
 }
