@@ -225,6 +225,16 @@ nav > button:active{
     width: 50px;
 }
 
+.attribution{
+    color: var(--MEDIUMGRAY);
+    font-size: .7rem;
+    margin-block: 50px;
+}
+
+.attribution > a{
+    color: var(--BLACK);
+}
+
 @media(min-width: 40em){
 
     .main--container{
