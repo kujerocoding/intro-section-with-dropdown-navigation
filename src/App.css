@@ -48,7 +48,6 @@ header{
 }
 
 .nav--mobile--hide{
-
     display: none;
 }
 
@@ -80,9 +79,6 @@ header{
 .nav--lists > li {
     margin-top: 20px;
     color: var(--MEDIUMGRAY);
-}
-
-.nav--features,.nav--company{
     cursor: pointer;
 }
 
@@ -182,6 +178,11 @@ nav > button {
     border: 1px solid var(--BLACK);
 }
 
+nav > button:active{
+    background-color: var(--BLACK);
+    color: var(--WHITE);
+}
+
 .main--container{
     max-width: 1200px;
     display: flex;
@@ -228,6 +229,7 @@ nav > button {
     border-radius: 10px;
     font-size: .9rem;
     width: 150px;
+    cursor: pointer;
 }
 
 .main--client--container{
@@ -296,6 +298,8 @@ nav > button {
     nav > button {
         width: 20%;
     }
+
+
 
     .nav--mobile--hide{
         width: 100%;
