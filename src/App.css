@@ -9,17 +9,17 @@
 }
 
 *, *::before, *::after{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
+    background-color: var(--WHITE);
+    display: flex;
     font-family: var(--FF);
     font-size: var(--FS);
-    display: flex;
     justify-content: center;
-    background-color: var(--WHITE);
 }
 
 #root{
@@ -27,19 +27,19 @@ body{
 }
 
 .app--container{
-    width: 100%;
-    position: relative;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
+    position: relative;
+    width: 100%;
 }
 
 header{
+    align-items: start;
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
-    align-items: start;
     width: 100%;
 }
 
@@ -52,17 +52,17 @@ header{
 }
 
 .nav--mobile--active{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 30px 20px;
+    align-items: start;
     background-color: var(--WHITE);
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: 20px;
-    min-width: 60%;
     min-height: 100vh;
+    min-width: 60%;
+    padding: 30px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .icon--menu--close{
@@ -70,88 +70,64 @@ header{
 }
 
 .nav--lists {
+    font-size: 1rem;
     list-style: none;
     margin-bottom: 30px;
     width: 100%;
-    font-size: 1rem;
 }
 
 .nav--lists > li {
-    margin-top: 20px;
     color: var(--MEDIUMGRAY);
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .features--lists, .company--lists{
-    list-style: none;
     color: var(--MEDIUMGRAY);
-    margin: 20px 50px;
-    line-height: 2rem;
     font-size: 1rem;
+    line-height: 2rem;
+    list-style: none;
+    margin: 20px 50px;
 }
 
 .company--lists{
     margin-left: 10px;
 }
 
-.features--lists--todo::before{
+.features--lists--todo::before,.features--lists--calendar::before, .features--lists--reminders::before,.features--lists--planning::before{
+    background-position: center;
+    background-repeat: no-repeat;
     content: "";
-    width: 20px;
     height: 30px;
     left: 30px;
     position: absolute;
-    background-image: url('./assets/images/icon-todo.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.features--lists--calendar::before{
-    content: "";
     width: 20px;
-    height: 30px;
-    left: 30px;
-    position: absolute;
-    background-image: url('./assets/images/icon-calendar.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.features--lists--reminders::before{
-    content: "";
-    width: 20px;
-    height: 30px;
-    left: 30px;
-    position: absolute;
-    background-image: url('./assets/images/icon-reminders.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.features--lists--planning::before{
-    content: "";
-    width: 20px;
-    height: 30px;
-    left: 30px;
-    position: absolute;
-    background-image: url('./assets/images/icon-planning.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.features--lists--todo::before{
-    content: "";
-    width: 20px;
-    height: 30px;
-    left: 30px;
-    position: absolute;
-    background-image: url('./assets/images/icon-todo.svg');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
+.features--lists--todo::before{
+       background-image: url('./assets/images/icon-todo.svg');
+}
+
+.features--lists--calendar::before{
+       background-image: url('./assets/images/icon-calendar.svg');
+   }
+
+.features--lists--reminders::before{
+      background-image: url('./assets/images/icon-reminders.svg');
+    }
+    
+.features--lists--planning::before{
+    background-image: url('./assets/images/icon-planning.svg');
+}
+
+
 .icon--arrow--up, .icon--arrow--down{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 15px;
     margin-left: 10px;
     position: absolute;
     width: 15px;
-    height: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .icon--arrow--up{
@@ -162,16 +138,16 @@ header{
 }
 
 nav > button {
-    font-family: inherit;
-    color: var(--MEDIUMGRAY);
-    width: 100%;
-    text-align: center;
-    padding-block: 10px;
+    background-color: transparent;
     border-radius: 12px;
     border: 1px solid transparent;
-    background-color: transparent;
+    color: var(--MEDIUMGRAY);
     cursor: pointer;
+    font-family: inherit;
     font-size: .9rem;
+    padding-block: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .btn--register{
@@ -184,24 +160,24 @@ nav > button:active{
 }
 
 .main--container{
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
 }
 
 .main--img--container{
     background-image: url(./assets/images/image-hero-mobile.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-    width: 100%;
     min-height: 300px;
+    width: 100%;
 }
 
 .main--text--container{
+    color: var(--BLACK);
     padding: 30px 20px;
     text-align: center;
-    color: var(--BLACK);
 }
 
 .main--text--container > h1{
@@ -214,31 +190,31 @@ nav > button:active{
 }
 
 .main--text--container > p{
-    padding-block: 20px;
     color: var(--MEDIUMGRAY);
     font-size: 1rem;
+    padding-block: 20px;
 }
 
 .main--text--container > button{
-    padding: 15px 20px;
     background-color: var(--BLACK);
-    color: var(--WHITE);
-    font-weight: 700;
-    font-family: inherit;
-    border: 1px solid transparent;
     border-radius: 10px;
-    font-size: .9rem;
-    width: 150px;
+    border: 1px solid transparent;
+    color: var(--WHITE);
     cursor: pointer;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: 15px 20px;
+    width: 150px;
 }
 
 .main--client--container{
-    margin-top: 20px;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin-top: 20px;
     padding-inline: 20px;
+    width: 100%;
 }
 
 .client--icons{
@@ -252,29 +228,29 @@ nav > button:active{
 @media(min-width: 40em){
 
     .main--container{
-        margin-top: 40px;
-        display: flex;
-        height: 600px;
-        flex-direction: row;
         align-items: flex-end;
+        display: flex;
+        flex-direction: row;
         gap: 30px;
+        height: 600px;
         margin-inline: 20px;
+        margin-top: 40px;
     }
     .main--img--container{
         background-image: url('/src/assets/images/image-hero-desktop.png');
-        order: 1;
         height: 100%;
+        order: 1;
         width: 50%;
     }
 
     .main--text--container{
-        padding: 0;
         display: flex;
         flex-direction: column;
-        text-align: left;
         gap: 30px;
-        width: 50%;
         padding-right: 100px;
+        padding: 0;
+        text-align: left;
+        width: 50%;
     }
 
     .main--text--container > p{
@@ -288,8 +264,6 @@ nav > button:active{
     .icon--menu{
         display: none;
     }
-
-    
     
     .icon--menu--close{
         display: none;
@@ -299,20 +273,18 @@ nav > button:active{
         width: 20%;
     }
 
-
-
     .nav--mobile--hide{
-        width: 100%;
+        align-items: center;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        width: 100%;
     }
 
     .nav--lists{
         display: flex;
         gap: 40px;
-        padding-left: 40px;
         margin: 0;
+        padding-left: 40px;
         padding-right: 20px;
     }
 
@@ -321,28 +293,28 @@ nav > button:active{
     }
 
     header{
-        justify-content: flex-start;
         align-items: center;
+        justify-content: flex-start;
     }
 
     .features--lists, .company--lists{
         background-color: white;
-        position: absolute;
-        box-shadow: 2px 2px 5px rgba(0, 0 , 0, .2);
         border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0 , 0, .2);
         padding-block: 20px;
+        position: absolute;
         top: 50px;
     }
 
     .features--lists{
-        width: 180px;
-        text-align: center;
         left: 0;
+        text-align: center;
+        width: 180px;
     }
 
     .company--lists{
-        padding: 20px;
         left: 240px;
+        padding: 20px;
     }
   
 }

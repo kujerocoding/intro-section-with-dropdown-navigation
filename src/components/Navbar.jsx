@@ -13,10 +13,8 @@ const Navbar = (props) => {
         }
     }
 
-
-
   return (
-    <nav className={props.isMenuOpen ? 'nav--mobile--hide' : 'nav--mobile--active'}>
+    <nav className={props.isMenuOpen ? 'nav--mobile--active' : 'nav--mobile--hide'}>
       <img className="icon--menu--close" src="./src/assets/images/icon-close-menu.svg" alt="X icon" onClick={props.handleClick}/>
       <ul className='nav--lists'>
         <li id="features" 

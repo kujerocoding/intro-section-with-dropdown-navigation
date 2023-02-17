@@ -9,9 +9,7 @@ const Header = () => {
     function handleMenuClick(){
         setIsMenuOpen(prevState => !prevState)
     }
-
     
-
   return (
     <header>
         <img src="../src/assets/images/logo.svg" alt="Snap logo" />
